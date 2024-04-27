@@ -3,7 +3,7 @@ stages:
 
 build_windows:
   stage: build
-  image: golang:latest
+  image: golang:1.22
   variables:
     GOARCH: amd64
     GOOS: windows
@@ -16,7 +16,7 @@ build_windows:
 
 build_linux:
   stage: build
-  image: golang:latest
+  image: golang:1.22
   variables:
     GOARCH: amd64
     GOOS: linux
@@ -29,7 +29,7 @@ build_linux:
 
 build_mac:
   stage: build
-  image: golang:latest
+  image: golang:1.22
   variables:
     GOARCH: amd64
     GOOS: darwin
@@ -42,7 +42,7 @@ build_mac:
 
 build_mac_arm:
   stage: build
-  image: golang:latest
+  image: golang:1.22
   variables:
     GOARCH: arm64
     GOOS: darwin

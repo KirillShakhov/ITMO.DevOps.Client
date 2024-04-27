@@ -8,7 +8,7 @@ build_windows:
     GOOS: windows
     CGO_ENABLED: 0
   script:
-    - go build main.go -o ./app_windows_amd64.exe
+    - go build -o ./app_windows_amd64.exe main.go
   artifacts:
     paths:
       - ./app_windows_amd64.exe
@@ -20,7 +20,7 @@ build_linux:
     GOOS: linux
     CGO_ENABLED: 0
   script:
-    - go build main.go -o ./app_linux_amd64
+    - go build -o ./app_linux_amd64 main.go
   artifacts:
     paths:
       - ./app_linux_amd64
@@ -32,7 +32,7 @@ build_mac:
     GOOS: darwin
     CGO_ENABLED: 0
   script:
-    - go build main.go -o ./app_mac_amd64
+    - go build -o ./app_mac_amd64 main.go
   artifacts:
     paths:
       - ./app_mac_amd64
@@ -44,7 +44,7 @@ build_mac_arm:
     GOOS: darwin
     CGO_ENABLED: 0
   script:
-    - go build main.go -o ./app_mac_arm64
+    - go build -o ./app_mac_arm64 main.go
   artifacts:
     paths:
       - ./app_mac_arm64

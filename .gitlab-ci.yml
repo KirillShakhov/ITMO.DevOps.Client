@@ -9,10 +9,10 @@ build_windows:
     GOOS: windows
     CGO_ENABLED: 0
   script:
-    - go build -o ./app_windows_amd64.exe
+    -go build -o ./app_windows_amd64.exe
   artifacts:
     paths:
-      - ./app_windows_amd64.exe
+      -./app_windows_amd64.exe
 
 build_linux:
   stage: build
@@ -22,10 +22,10 @@ build_linux:
     GOOS: linux
     CGO_ENABLED: 0
   script:
-    - go build -o ./app_linux_amd64
+    -go build -o ./app_linux_amd64
   artifacts:
     paths:
-      - ./app_linux_amd64
+      -./app_linux_amd64
 
 build_mac:
   stage: build
@@ -35,10 +35,10 @@ build_mac:
     GOOS: darwin
     CGO_ENABLED: 0
   script:
-    - go build -o ./app_mac_amd64
+    -go build -o ./app_mac_amd64
   artifacts:
     paths:
-      - ./app_mac_amd64
+      -./app_mac_amd64
 
 build_mac_arm:
   stage: build
@@ -48,7 +48,7 @@ build_mac_arm:
     GOOS: darwin
     CGO_ENABLED: 0
   script:
-    - go build -o ./app_mac_arm64
+    -go build -o ./app_mac_arm64
   artifacts:
     paths:
-      - ./app_mac_arm64
+      -./app_mac_arm64

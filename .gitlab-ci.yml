@@ -1,4 +1,15 @@
-image: golang:1.17.0-alpine
+before_script:
+  - go version
+  - echo "Checking go env..."
+  - go env  # Display Go environment settings for diagnostic purposes
+  - export GO111MODULE=on  # Ensure modules are enabled
+  - export GOPROXY=https://proxy.golang.org,direct  # Use the Go module mirror
+  - mkdir -p $CI_PROJECT_DIR/go/bin
+  - mkdir -p $CI_PROJECT_DIR/go/pkg
+  - mkdir -p $CI_PROJECT_DIR/go/src
+  - export GOPATH=$CI_PROJECT_DIR/go
+  - export PATH=$PATH:$GOPATH/bin
+
 stages:
   - build
 

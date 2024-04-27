@@ -1,7 +1,4 @@
 before_script:
-  - go version
-  - echo "Checking go env..."
-  - go env  # Display Go environment settings for diagnostic purposes
   - export GO111MODULE=on  # Ensure modules are enabled
   - export GOPROXY=https://proxy.golang.org,direct  # Use the Go module mirror
   - mkdir -p $CI_PROJECT_DIR/go/bin

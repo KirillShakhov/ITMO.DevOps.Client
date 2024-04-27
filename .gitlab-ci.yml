@@ -3,7 +3,7 @@ stages:
 
 build_windows:
   stage: build
-  image: golang:onbuild
+  image: golang:latest
   variables:
     GOARCH: amd64
     GOOS: windows
@@ -12,11 +12,11 @@ build_windows:
     -go build -o ./app_windows_amd64.exe
   artifacts:
     paths:
-      -./app_windows_amd64.exe
+      - ./app_windows_amd64.exe
 
 build_linux:
   stage: build
-  image: golang:onbuild
+  image: golang:latest
   variables:
     GOARCH: amd64
     GOOS: linux
@@ -25,11 +25,11 @@ build_linux:
     -go build -o ./app_linux_amd64
   artifacts:
     paths:
-      -./app_linux_amd64
+      - ./app_linux_amd64
 
 build_mac:
   stage: build
-  image: golang:onbuild
+  image: golang:latest
   variables:
     GOARCH: amd64
     GOOS: darwin
@@ -38,11 +38,11 @@ build_mac:
     -go build -o ./app_mac_amd64
   artifacts:
     paths:
-      -./app_mac_amd64
+      - ./app_mac_amd64
 
 build_mac_arm:
   stage: build
-  image: golang:onbuild
+  image: golang:latest
   variables:
     GOARCH: arm64
     GOOS: darwin
@@ -51,4 +51,4 @@ build_mac_arm:
     -go build -o ./app_mac_arm64
   artifacts:
     paths:
-      -./app_mac_arm64
+      - ./app_mac_arm64

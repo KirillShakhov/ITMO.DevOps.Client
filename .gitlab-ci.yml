@@ -4,7 +4,7 @@ before_script:
   - mkdir -p $CI_PROJECT_DIR/go/bin
   - mkdir -p $CI_PROJECT_DIR/go/pkg
   - mkdir -p $CI_PROJECT_DIR/go/src
-  - export GOPATH=/opt/homebrew/bin/go
+  - export GOPATH=/opt/homebrew/Cellar/go/1.22.2/bin
   - export PATH=$PATH:$GOPATH/bin
 
 stages:
